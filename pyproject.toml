@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lhf-lex"
+version = "0.3.0"
+description = "Ablation study scaffold for lexical alignment metrics (OPM placeholder + LAS stub) and training (SFT, DPO)."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Ablation Study Team" }]
+dependencies = [
+  "pandas>=2.0.0",
+  "transformers>=4.41.0",
+  "huggingface_hub>=0.24,<0.34.4",
+  "datasets>=2.18.0",
+  "accelerate>=0.30.0",
+  "peft>=0.11.0",
+  "trl>=0.4.7",
+  "tiktoken>=0.5.2",
+  "protobuf>=3.20.3,<5",
+  "sentencepiece>=0.1.99",
+  "tabulate>=0.9",
+  "openai>=1.40.0",
+  "spacy>=3.8,<4",
+  "spacy-lookups-data>=1.0.0",
+  # model wheels (hosted by Explosion)
+  "en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl",
+  "en-core-web-trf @ https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.8.0/en_core_web_trf-3.8.0-py3-none-any.whl",
+  "cupy-cuda12x==12.1.0"
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

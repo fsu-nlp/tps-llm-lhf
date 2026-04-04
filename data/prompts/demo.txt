@@ -1,0 +1,3 @@
+Explain Learning from Human Feedback in one sentence.
+Summarise the benefits and drawbacks of block-sparse attention in 3 sentences.
+Write a 100-word British English abstract about evaluation metrics for lexical alignment.
