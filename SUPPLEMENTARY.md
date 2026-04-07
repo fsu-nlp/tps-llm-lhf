@@ -31,9 +31,7 @@ Experiments were conducted across two primary infrastructures to ensure cross-pl
 
 ## 2. Ethical Considerations
 
-The risks presented in our research are minimal as we exclusively utilize public data and open-weights models. Our study serves as a diagnostic identification of model behavior bias, conducted at a moderate compute expense (~$1,160). 
-
-A significant ethical concern in the AI industry is the human labor underlying preference-learning datasets, particularly reports regarding exploitative working conditions. While this concern is inherent to the broader industry's data collection choices rather than our specific diagnostic methodology, we believe it requires ongoing transparency and scrutiny from model developers and the research community.
+The risks presented in our research work are minimal, since it uses public data and open models. Our research focuses on model behavior bias diagnostic identification, at moderate expenses ( $1,160). A potential ethical concern is the human labor underlying preference-learning datasets, particularly reports of poor working conditions (Perrigo 2023; Perrigo 2025). While this labor concern is inherently the choice of model training instead of AI technology itself, it requires subsequent scrutiny.
 
 ---
 
@@ -95,12 +93,15 @@ The categorical Romance ratio $\rho_{p,S}$ is defined as the Romance-origin mass
 $$\rho_{p,S} = \frac{\sum_{w \in p \cap \text{Romance}} c_S(w)}{\sum_{w \in p \cap \text{Romance}} c_S(w) + \sum_{w \in p \cap \text{Germanic}} c_S(w)}$$
 
 To obtain Figure 1 results, we computed the Odds Ratio ($O_{p,S}$) and final Relative Shift ($RS_p$) as:
+
 $$O_{p,S} = \frac{\rho_{p,S}}{1 - \rho_{p,S}}, \quad RS_p = \frac{O_{p,I}}{O_{p,B}}$$
+
 and $RS_p$ values are plotted in Figure 1 for each model family.
 
 For the overall aggregated shift $Agg_S$, we utilize categorical mass $M_{p,S}$ and weights $W_{p,S}$:
+
 $$M_{p, S} = \sum_{w \in p} c_S(w), \quad W_{p,S} = \frac{M_{p,S}}{\sum_{p'} M_{p',S}}$$
-$$Agg_S = \sum_{p \in \text{POS}} (\rho_{p,S} \cdot W_{p,S})$$
+$$AGGREGATE_S = \sum_{p \in \text{POS}} (\rho_{p,S} \cdot W_{p,S})$$
 
 ### 4.2 Model-wise Distribution Tables
 The tables below present granular etymological data for each model family. The fractional values in the "Mass" columns arise from the windowed frequency $c_S(w) = \sum_{i=1}^{R} Y_{iS}(w)$, where $Y_{iS}(w)$ is the mean of binary indicator functions across $N_w = 4$ stratified windows.
