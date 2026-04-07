@@ -1,17 +1,16 @@
 # Supplemental Information
 
-This document serves as the extended technical and data appendix for the study: **"Isolating instruction-stage effects enables linguistic probing of model behavior."** All materials are provided to ensure the reproducibility and transparency of our findings.
+This document serves as the extended technical and data appendix for the study. All materials are provided to ensure the reproducibility and transparency of our findings.
 
 ---
 
 ## 1. Code, Data, and Computational Setup
 
-### Repository Access
-All source code, spaCy/CoNLL-U processing scripts, and raw Triangulated Preference Shift (TPS) results are available at:  
-[https://github.com/fsu-nlp/tps-llm-lhf](https://github.com/fsu-nlp/tps-llm-lhf)
+### Code
+All code, configuration files, and processed data used in this study are publicly available in this GitHub repository at at: [https://github.com/fsu-nlp/tps-llm-lhf](https://github.com/fsu-nlp/tps-llm-lhf).
 
-### Computational Environment
-Experiments were conducted across two primary infrastructures to ensure cross-platform consistency.
+### Computational Setup
+Experiments were conducted across two primary infrastructure platforms to ensure cross-platform consistency.
 
 **I. GPU Server (High Performance)**
 - **Hardware:** NVIDIA H100 PCIe (80 GB VRAM); Intel Xeon Platinum 8480+ CPU.
@@ -22,10 +21,8 @@ Experiments were conducted across two primary infrastructures to ensure cross-pl
 - **Hardware:** NVIDIA RTX A4500 (20 GB VRAM); AMD EPYC 7313 CPU (16 cores).
 - **Environment:** Linux kernel 4.18.0-372.32.1; 251 GiB system storage.
 
-### Software Stack
-- **Python:** 3.12.3
-- **Deep Learning:** PyTorch 2.8.0+cu128, `transformers` 4.56.1, `accelerate` 1.10.1, `peft` 0.17.1.
-- **NLP Processing:** `spaCy` 3.8.7.
+### Software Environment (Identical Across Platforms)
+- Python 3.12.3, PyTorch 2.8.0+cu128, `transformers` 4.56.1, `accelerate` 1.10.1, `peft` 0.17.1, and `spaCy` 3.8.7. Additional implementation details and configuration files are provided in the anonymous repository.
 
 ---
 
@@ -35,7 +32,7 @@ The risks presented in our research work are minimal, since it uses public data 
 
 ---
 
-## 3. TPS Ranking Results
+## 3. TPS Ranking Results Per Model Family
 
 The following tables list the Top 20 lexical items (lemma + UPOS) exhibiting the highest Triangulated Preference Shift ($wTPS$) per model family.
 
