@@ -1,12 +1,12 @@
 # LLM bias isolation for preference learning stage: Triangulated Preference Shift score
-_Companion code for the paper: **Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for
+_Companion code, configuration files, raw data and supplementary information for the paper: **Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for
 Preference-Stage Learning**._
 
 [Commands](./commands.md)
 
 ---
 
-## TL;DR
+## TL;DR: The Pipeline
 We provide an end-to-end, **deterministic** pipeline to quantify preference-stage shifts (TPS) in model continuations:
 **prompts → generation (Base/Instruct) → deletion-only cleaning → POS → TPS discover & eval**.
 
@@ -22,6 +22,12 @@ We provide an end-to-end, **deterministic** pipeline to quantify preference-stag
 - Everything else: CPU is sufficient, you can even use our precomputed TPS tables.
 
 ---
+## Repository Structure
+- **src/:** :Core logic for TPS calculation and etymology parsing.
+- **scripts/** :Pipeline running scripts.
+- **data/** :Raw data (42,000 pubmed abstacts and cleaned generations) OSF links.
+- **COMMANDS.md** :Step-by-step CLI instructions for reproduction.
+- **SUPPLEMENTARY.md** :Supplemental information for paper's Supporting Materials. 
 
 ## Getting started
 - * Use the scripts directly, with the commands provided in COMMANDS.md.
