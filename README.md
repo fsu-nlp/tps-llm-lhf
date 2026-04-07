@@ -1,8 +1,5 @@
 # LLM bias isolation for preference learning stage: Triangulated Preference Shift score
-_Companion code, configuration files, raw data and supplementary information for the paper: **Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for
-Preference-Stage Learning**._
-
-[Commands](./commands.md)
+Companion code, configuration files, raw data and supplementary information for the paper: **Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for Preference-Stage Learning**.
 
 ---
 
@@ -25,12 +22,15 @@ We provide an end-to-end, **deterministic** pipeline to quantify preference-stag
 ## Repository Structure
 - **src/:** :Core logic for TPS calculation and etymology parsing.
 - **scripts/** :Pipeline running scripts.
-- **data/** :Raw data (42,000 pubmed abstacts and cleaned generations) OSF links.
-- **COMMANDS.md** :Step-by-step CLI instructions for reproduction.
-- **SUPPLEMENTARY.md** :Supplemental information for paper's Supporting Materials. 
+- **data/** :Prompts for model generation, raw data (42,000 pubmed abstacts and cleaned generations) OSF links.
+- **[COMMANDS](./COMMANDS.md)** :Step-by-step CLI instructions for reproduction.
+- **[SUPPLEMENTARY](./SUPPLEMENTARY.md)** :Supplemental information for paper's Supporting Materials. 
 
 ## Getting started
-- Use the scripts directly, with the commands provided in COMMANDS.md.
+Use the scripts directly, with the commands provided in [COMMANDS](./COMMANDS.md)
+
+## Supporting Materials
+Please check Supporting Materials in file [SUPPLEMENTARY](./SUPPLEMENTARY.md)
 
 
 ---
