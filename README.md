@@ -30,7 +30,7 @@ We provide an end-to-end, **deterministic** pipeline to quantify preference-stag
 - **SUPPLEMENTARY.md** :Supplemental information for paper's Supporting Materials. 
 
 ## Getting started
-- * Use the scripts directly, with the commands provided in COMMANDS.md.
+- Use the scripts directly, with the commands provided in COMMANDS.md.
 
 
 ---
