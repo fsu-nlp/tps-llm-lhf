@@ -22,7 +22,7 @@ Modular scaffold for **LLM lexical preference learning bias**.
   - [4.3 Step 2 — GPT cleaner](#43-step-2--gpt-cleaner)
   - [4.4 Human cleaning](#44-human-cleaning)
 - [5. POS tagging → CoNLL-U](#5-pos-tagging--conll-u)
-  - [5.1 Tag with the transformer model](#51-tag-with-the-transformer-model)
+  - [5.1 Tag with the transformer model](#51-tag-with-the-transformer-model-paper-settings)
 - [6. Triangulate with TPS](#6-triangulate-with-tps)
   - [6.1 estimate / discover first](#61-estimate--discover-first)
   - [6.2 Scoring (TPS)](#62-scoring-tps)
@@ -30,6 +30,10 @@ Modular scaffold for **LLM lexical preference learning bias**.
   - [6.3 Score all models](#63-score-all-models)
     - [6.3.1 example 1](#631-example-1-unchanged)
     - [6.3.2 example 2](#632-example-2-unchanged)
+- [7. Etymology Analysis Pipeline](#7-etymology-analysis-pipeline)
+  - [7.1 Build the Etymology Database](#71-build-the-etymology-database)
+  - [7.2 Annotate TPS Results](#72-annotate-tps-results)
+  - [7.3 Compute Etymological Market Share](#73-compute-etymological-market-share)
 - [Provenance](#provenance)
 
 ---
@@ -439,6 +443,47 @@ done
 ```
 
 ---
+
+## 7. Etymology Analysis Pipeline
+
+This pipeline provides the tools to replicate our etymological "market share" analysis, moving from raw Wiktionary data to the Part-of-Speech (POS) distribution results used in our study.
+
+### 7.1 Build the Etymology Database
+First, parse a de-compressed Wiktionary XML dump to create a TSV lookup table. This script extracts etymology and POS data for English lemmas while normalizing donor languages, such as standardizing Latin variants.
+
+```bash
+python3 build_wiktionary_etym_tsv.py \
+    --xml enwiktionary-latest-pages-articles.xml \
+    --out ./data/en_etymology.tsv
+```
+
+### 7.2 Annotate TPS Results
+This step annotates the word-level TPS results with etymology labels by matching the lemma_UPOS key against the database built in Step 7.1.
+```bash
+# For a single model result
+python3 annotate_tps_with_etymology.py \
+    --etym ./data/en_etymology.tsv \
+    --tps ./data/tps_word_llama3.csv \
+    --out-dir ./data/annotated/
+
+# Or batch process an entire directory of results
+python3 annotate_tps_with_etymology.py \
+    --etym ./data/en_etymology.tsv \
+    --tps-dir ./data/tps_all/ \
+    --pattern "tps_word_*.csv" \
+    --out-dir ./data/annotated/
+```
+### 7.3 Compute Etymological Market Share
+The final script computes the etymological distribution (mass and share) within each POS category to isolate the shifts induced by instruction tuning.
+```bash
+python3 etym_marketshare_by_pos.py \
+    --input ./data/annotated/tps_word_llama3.etym.csv \
+    --outdir ./results/etymology/llama3/ \
+    --denom found_only
+```
+
+---
+
 
 ## Provenance
 
