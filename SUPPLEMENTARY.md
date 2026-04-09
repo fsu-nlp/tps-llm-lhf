@@ -95,9 +95,12 @@ $$O_{p,S} = \frac{\rho_{p,S}}{1 - \rho_{p,S}}, \quad RS_p = \frac{O_{p,I}}{O_{p,
 
 and $RS_p$ values are plotted in Figure 1 for each model family.
 
-For the overall aggregated shift $Agg_S$, we utilize categorical mass $M_{p,S}$ and weights $W_{p,S}$:
+For the overall aggregated shift $AGGREGATE_S$, first we compute the categorical mass $M_{p,S}$ and weights $W_{p,S}$:
 
 $$M_{p, S} = \sum_{w \in p} c_S(w), \quad W_{p,S} = \frac{M_{p,S}}{\sum_{p'} M_{p',S}}$$
+
+Then we obtain the final result using the $\rho_{p,S}$ and $W_{p,S}$
+
 $$AGGREGATE_S = \sum_{p \in \text{POS}} (\rho_{p,S} \cdot W_{p,S})$$
 
 ### 4.2 Model-wise Distribution Tables
