@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this work, a citation is appreciated (though not required; see the licence)."
+title: "tps-llm-lhf: code for 'Isolating LLM Lexical Bias' (FLAIRS-39)"
+type: software
+authors:
+  - family-names: "Ming"
+    given-names: "Xiaoyang"
+  - family-names: "Hernandez"
+    given-names: "Jose"
+  - family-names: "Juzek"
+    given-names: "Thomas Stephan"
+    orcid: "https://orcid.org/0000-0002-3204-3879"
+repository-code: "https://github.com/fsu-nlp/tps-llm-lhf"
+preferred-citation:
+  type: conference-paper
+  title: "Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for Preference-Stage Learning"
+  authors:
+    - family-names: "Ming"
+      given-names: "Xiaoyang"
+    - family-names: "Hernandez"
+      given-names: "Jose"
+    - family-names: "Juzek"
+      given-names: "Thomas Stephan"
+      orcid: "https://orcid.org/0000-0002-3204-3879"
+  year: 2026
+  collection-title: "The International FLAIRS Conference Proceedings"
+  volume: 39
+  issue: 1
+  doi: "10.32473/flairs.39.1.141843"
