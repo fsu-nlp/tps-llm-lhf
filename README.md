@@ -57,3 +57,7 @@ If you use this code or data, a citation is appreciated (though not required; se
   doi     = {10.32473/flairs.39.1.141843}
 }
 ```
+
+## AI Assistance
+
+Repository polished with Claude Code.
