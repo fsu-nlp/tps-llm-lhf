@@ -42,4 +42,18 @@ Please check Supporting Materials in file [SUPPLEMENTARY](./SUPPLEMENTARY.md)
 This repository is released under the **<LICENSE NAME>** license.
 See [`LICENSE`](./LICENSE) for details.
 
+## Citation
 
+If you use this code or data, a citation is appreciated (though not required; see the licence).
+
+```bibtex
+@article{ming-etal-2026-isolating,
+  title   = {Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for Preference-Stage Learning},
+  author  = {Ming, Xiaoyang and Hernandez, Jose and Juzek, Thomas Stephan},
+  journal = {The International FLAIRS Conference Proceedings},
+  volume  = {39},
+  number  = {1},
+  year    = {2026},
+  doi     = {10.32473/flairs.39.1.141843}
+}
+```
