@@ -15,18 +15,35 @@ We provide an end-to-end, **deterministic** pipeline to quantify preference-stag
 
 ---
 
+## Citation
+
+If you use this code or data, a citation is appreciated (though not required; see the licence).
+
+```bibtex
+@article{ming-etal-2026-isolating,
+  title   = {Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for Preference-Stage Learning},
+  author  = {Ming, Xiaoyang and Hernandez, Jose and Juzek, Thomas Stephan},
+  journal = {The International FLAIRS Conference Proceedings},
+  volume  = {39},
+  number  = {1},
+  year    = {2026},
+  doi     = {10.32473/flairs.39.1.141843}
+}
+```
+
 ## Requirements
 - General requirements as per .toml. 
 - **Generation** requires a GPU with ≥20 GB VRAM (per 7–8B model), Hugging Face auth.
 - Everything else: CPU is sufficient, you can even use our precomputed TPS tables.
 
 ---
+
 ## Repository Structure
 - **src/:** :Core logic for TPS calculation and etymology parsing.
 - **scripts/** :Pipeline running scripts.
 - **data/** :Prompts for model generation, raw data (42,000 pubmed abstacts and cleaned generations) OSF links.
 - **[COMMANDS](./COMMANDS.md)** :Step-by-step CLI instructions for reproduction.
-- **[SUPPLEMENTARY](./SUPPLEMENTARY.md)** :Supplemental information for paper's Supporting Materials. 
+- **[SUPPLEMENTARY](./SUPPLEMENTARY.md)** :Supplemental information for paper's Supporting Materials.
 
 ## Getting started
 Use the scripts directly, with the commands provided in [COMMANDS](./COMMANDS.md)
@@ -45,22 +62,6 @@ Please check Supporting Materials in file [SUPPLEMENTARY](./SUPPLEMENTARY.md)
 Note: the underlying PubMed abstracts used as prompts are included for research; the CC0 dedication covers only our derivatives (cleaned generations, POS tags, TPS tables, scripts), and the source abstract texts remain under their respective terms.
 
 The included paper PDF is the author version (published article: CC BY-NC 4.0, FLAIRS), separate from the code and data licences above.
-
-## Citation
-
-If you use this code or data, a citation is appreciated (though not required; see the licence).
-
-```bibtex
-@article{ming-etal-2026-isolating,
-  title   = {Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for Preference-Stage Learning},
-  author  = {Ming, Xiaoyang and Hernandez, Jose and Juzek, Thomas Stephan},
-  journal = {The International FLAIRS Conference Proceedings},
-  volume  = {39},
-  number  = {1},
-  year    = {2026},
-  doi     = {10.32473/flairs.39.1.141843}
-}
-```
 
 ## AI Assistance
 
