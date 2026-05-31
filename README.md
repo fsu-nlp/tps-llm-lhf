@@ -37,10 +37,12 @@ Please check Supporting Materials in file [SUPPLEMENTARY](./SUPPLEMENTARY.md)
 
 ---
 
-## License
+## Licence
 
-This repository is released under the **<LICENSE NAME>** license.
-See [`LICENSE`](./LICENSE) for details.
+- **Code** (`src/`, `scripts/`): MIT No Attribution (MIT-0). See [`LICENSE`](LICENSE). Use it freely, no attribution required.
+- **Data** (`data/`, `build/`): CC0 1.0 Universal (public domain dedication). See [`LICENSE-DATA`](LICENSE-DATA).
+
+Note: the underlying PubMed abstracts used as prompts are works of the U.S. federal government and are in the public domain; any dedication here covers only our derivatives (cleaned generations, POS tags, TPS tables, scripts).
 
 ## Citation
 
