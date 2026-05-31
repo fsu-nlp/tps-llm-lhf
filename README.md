@@ -44,6 +44,8 @@ Please check Supporting Materials in file [SUPPLEMENTARY](./SUPPLEMENTARY.md)
 
 Note: the underlying PubMed abstracts used as prompts are included for research; the CC0 dedication covers only our derivatives (cleaned generations, POS tags, TPS tables, scripts), and the source abstract texts remain under their respective terms.
 
+The included paper PDF is the author version (published article: CC BY-NC 4.0, FLAIRS), separate from the code and data licences above.
+
 ## Citation
 
 If you use this code or data, a citation is appreciated (though not required; see the licence).
