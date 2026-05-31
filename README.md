@@ -42,7 +42,7 @@ Please check Supporting Materials in file [SUPPLEMENTARY](./SUPPLEMENTARY.md)
 - **Code** (`src/`, `scripts/`): MIT No Attribution (MIT-0). See [`LICENSE`](LICENSE). Use it freely, no attribution required.
 - **Data** (`data/`, `build/`): CC0 1.0 Universal (public domain dedication). See [`LICENSE-DATA`](LICENSE-DATA).
 
-Note: the underlying PubMed abstracts used as prompts are works of the U.S. federal government and are in the public domain; any dedication here covers only our derivatives (cleaned generations, POS tags, TPS tables, scripts).
+Note: the underlying PubMed abstracts used as prompts are included for research; the CC0 dedication covers only our derivatives (cleaned generations, POS tags, TPS tables, scripts), and the source abstract texts remain under their respective terms.
 
 ## Citation
 
