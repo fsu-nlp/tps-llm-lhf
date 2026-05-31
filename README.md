@@ -1,7 +1,7 @@
 # LLM bias isolation for preference learning stage: Triangulated Preference Shift score
 Companion code, configuration files, raw data and supplementary information for the paper: **Isolating LLM Lexical Bias: A Curation-Free Triangulated Metric for Preference-Stage Learning**.
 
-Published paper: [FLAIRS Proceedings PDF](https://journals.flvc.org/FLAIRS/article/view/141843/147188)
+Published paper: [FLAIRS Proceedings PDF](https://journals.flvc.org/FLAIRS/article/view/141843/147188) The author version (arXiv-ready) is also included here as [`Isolating-LLM-Lexical-Bias.pdf`](Isolating-LLM-Lexical-Bias.pdf).
 
 ---
 
